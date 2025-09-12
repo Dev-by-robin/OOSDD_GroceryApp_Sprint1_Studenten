@@ -12,8 +12,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest  # Of windows-latest/macOS-latest als specifiek platform nodig is
-  # Of windows-latest/macOS-latest als specifiek platform nodig is
-
     steps:
       - name: Haal de repository op
         uses: actions/checkout@v4
@@ -25,11 +23,7 @@ jobs:
  
       - name: Installeer MAUI workloads
         run: dotnet workload install maui-android
-
-      - name: Install MAUI workloads
-        run: dotnet workload install maui
-
-
+ 
       - name: Herstel afhankelijkheden
         run: dotnet restore
  
